@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./images/justice.png" />
+            <h1 >Committed to Justice !</h1>
+
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#practice-areas">Practice Areas</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#practice-areas">Practice Areas</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    
+      <!-- JavaScript for Mobile Menu Toggle -->
+      <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+        });
+      </script>
+      <div class="about">
+        
+        <h1>- Lawyer Pragati Barde</h1><br><hr><br>
+        <h2>"Fighting for Justice for over 20 Years"</h1><br>
+            <div class="btn">
+        <a href="#consultation"><button> Start  Free Consultation</button></a><br>
+        <a href="#about"><button>Read About Me</button></a><br>
+            </div>
+        <!-- <h3>Empowering Justice , One Case at a Time .</h3> -->
+        </div>
+
+        <section class="about-me" id="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/lawyer.jpg" alt="Lawyer Portrait">
+                </div>
+                <div class="about-content">
+                   
+                    <h3>Pragati Barde - Advocate & Legal Expert</h3>
+                    <p>
+                        With over <strong>20 years of experience</strong> in criminal and corporate law, I have been
+                        passionately defending my clients and ensuring justice prevails. My practice revolves around dedication, precision,
+                        and delivering results that matter.
+                    </p>
+                    <p>
+                        I specialize in <strong>civil disputes, corporate litigation, and family law</strong>. As a strong advocate, I bring
+                        expertise, ethics, and commitment to every case I handle.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>20+</h4>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Successful Cases</p>
+                        </div>
+                        <div class="stat">
+                            <h4>300+</h4>
+                            <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- practice area section -->
+        <section class="practice-areas" id="practice-areas">
+            <h2>Practice Areas</h2>
+            <p>Providing expert legal services in a wide range of fields.</p>
+            <div class="area-container">
+                <div class="area-item">
+                    <i class="fa-solid fa-gavel"></i>
+                    <h3>Criminal Defense</h3>
+                    <p>Protecting your rights with a dedicated and strategic approach to criminal law.</p>
+                </div>
+                <div class="area-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Family Law</h3>
+                    <p>Helping families resolve legal matters with care and expertise.</p>
+                </div>
+                <div class="area-item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Corporate Law</h3>
+                    <p>Assisting businesses with contracts, compliance, and other corporate legal needs.</p>
+                </div>
+                <div class="area-item">
+                    <i class="fa-solid fa-landmark"></i>
+                    <h3>Real Estate Law</h3>
+                    <p>Offering comprehensive guidance for property transactions and disputes.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        
+         <!-- Free Consultation Form -->
+<section class="consultation-form" id="consultation">
+    <div class="form-container">
+        <h2>Request a Free Consultation</h2>
+        <p>Fill out the form below, and we will get back to you shortly.</p>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your case" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+    </div>
+</section>
+
+
+
+</body>
+</html>

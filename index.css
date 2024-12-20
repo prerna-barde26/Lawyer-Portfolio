@@ -1,0 +1,538 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 50px;
+    
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: gold;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px gold;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: gold;
+    margin: 5px;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.mobile-menu a:hover {
+    background-color: #333;
+    color: gold;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation links */
+    }
+
+    .hamburger {
+        display: flex; 
+        flex-direction: column;/* Show hamburger menu */
+    }
+}
+
+
+/* about section css */
+  .about {
+        padding: 40px 20px;
+        background: linear-gradient(to bottom, #222, #333);
+        color: white;
+        text-align: center;
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(50,50,93,0.25) 0px -2px 6px 0px inset;
+    }
+    
+    .about h1 {
+        font-size: clamp(2.2rem, 5vw, 3rem); /* Responsive font size */
+        font-weight: bold;
+        color: gold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin-bottom: 20px;
+    }
+    
+    .about hr {
+        width: 50%;
+        margin: 0 auto 30px;
+        border: none;
+        height: 3px;
+        background-color: gold;
+    }
+    
+    .about h2 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+        color: white;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* Buttons Container */
+    .btn {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px auto;
+        max-width: 500px;
+    }
+    
+    .btn button {
+        color: white;
+        background: linear-gradient(135deg, #444, #555);
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .btn button:hover {
+        background: linear-gradient(135deg, #555, #666);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Highlighted Text */
+    .about h3 {
+        margin-top: 30px;
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        color: gold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: rgba(51, 51, 51, 0.6);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .about {
+            padding: 40px 10px;
+        }
+    
+        .about h1 {
+            font-size: 2rem;
+        }
+    
+        .about h2 {
+            font-size: 1.2rem;
+        }
+    
+        .btn {
+            flex-direction: column; /* Buttons stack vertically */
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .btn button {
+            width: 80%;
+        }
+    
+        .about h3 {
+            font-size: 1rem;
+            padding: 8px 15px;
+        }
+    }
+    
+    /* anout me section */
+    /* About Me Section Styling */
+.about-me {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px black;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h3 {
+    font-size: 1.9rem;
+    color: gold;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px black;
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat h4 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.consult-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #444, #555);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.consult-btn:hover {
+    background: linear-gradient(to right, #555, #666);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* Practice Areas Section */
+.practice-areas {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.practice-areas h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+  
+}
+
+.practice-areas p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.area-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.area-item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.area-item i {
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.area-item h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.area-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.area-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(to right, #444, #555);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(to right, #555, #666);
+}
+
+
+/* free consultation form */
+
+.consultation-form {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px black;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.form-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #444;
+}
+
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #444, #555);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #555, #666);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-container p {
+        font-size: 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
